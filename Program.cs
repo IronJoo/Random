@@ -2,7 +2,7 @@
 
 namespace Testes
 {
-    class MainClass //{}
+    class MainClass //{} PRECISA DE REFORMULAÇÃO
     {
         public static void Main(string[] args)
         {
@@ -20,6 +20,6 @@ namespace Testes
             }
 
             return result;
-        }
+        } 
     }
 }
