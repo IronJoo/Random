@@ -2,24 +2,30 @@
 
 namespace Testes
 {
-    class MainClass //{} PRECISA DE REFORMULAÇÃO
+    class MainClass //{}
     {
         public static void Main(string[] args)
         {
-            Console.Write("Insert a number: ");
-            Console.Write(Factorial(int.Parse(Console.ReadLine())));
+            Console.Write("Insert a number number: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Insert another number: ");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"You inserted the numbers {num1} and {num2}.");
+            Console.WriteLine("The highest of them is {0}.", Highest(num1, num2));
+            
 
             Console.ReadLine();
         }
-        static int Factorial(int num)
+        static int Highest(int num1, int num2)
         {
-            int result = num;
-            for (int i = num; i > 1; i--)
+            if (num1 > num2)
             {
-                result = result * (i - 1);
+                return num1;
             }
-
-            return result;
+            else
+            {
+                return num2;
+            }
         } 
     }
 }
