@@ -6,32 +6,36 @@ namespace Testes
     {
         public static void Main(string[] args)
         {
-            Console.Write("Insert a number number: ");
-            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Insert a number: ");
+            double num1 = double.Parse(Console.ReadLine());
+            Console.Write("Insert an operator: ");
+            string op = Console.ReadLine();
             Console.Write("Insert another number: ");
-            int num2 = int.Parse(Console.ReadLine());
-            Console.Write("Insert one more number: ");
-            int num3 = int.Parse(Console.ReadLine());
-            Console.WriteLine($"You inserted the numbers {num1}, {num2} and {num3}.");
-            Console.WriteLine("The highest of them is {0}.", Highest(num1, num2, num3));
-            
-
-            Console.ReadLine();
-        }
-        private static int Highest(int num1, int num2, int num3)
-        {
-            if (num1 >= num2 && num1 >= num3)
+            double num2 = double.Parse(Console.ReadLine());
+            Console.Write($"You inserted the following calculation: {num1} {op} {num2} = ");
+            if (op == "x" || op == "*")
             {
-                return num1;
+                Console.Write(num1 * num2);
             }
-            else if (num2 >= num1 && num2 >= num3)
+            else if (op == "+")
             {
-                return num2;
+                Console.Write(num1 + num2);
+            }
+            else if (op == "-")
+            {
+                Console.Write(num1 - num2);
+            }
+            else if (op == ":" || op == "/")
+            {
+                double result = num1 / num2;
+                Console.Write(result);
             }
             else
             {
-                return num3;
+                Console.Write("Invalid operator.");
             }
+
+            Console.ReadLine();
         } 
     }
 }
