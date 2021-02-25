@@ -6,7 +6,7 @@ namespace Testes
     {
         public static void Main(string[] args)
         {
-            Console.Write("Insert a number to be guessed by your partner!: ");
+            Console.Write("From 1 to 10, insert a number to be guessed by your partner!: ");
             int secretNum = int.Parse(Console.ReadLine());
 
             Console.Clear();
@@ -16,7 +16,7 @@ namespace Testes
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("From 1 to 10, guess what number I'm thinking of!: ");
+            Console.WriteLine("You have 3 tries.\nFrom 1 to 10, guess what number I'm thinking of!: ");
             int guess = int.Parse(Console.ReadLine());
             int guessCount = 1;
 
@@ -28,7 +28,7 @@ namespace Testes
             {
                 while (guessCount < 3 && guess != secretNum)
                 {
-                    Console.WriteLine("Incorrect! Try again: ");
+                    Console.WriteLine("Incorrect! You have {0} attemp(s) left. Try again: ", (3 - guessCount));
                     guess = int.Parse(Console.ReadLine());
                     guessCount++;
                     if (guess == secretNum)
