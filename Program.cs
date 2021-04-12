@@ -2,25 +2,64 @@
 
 namespace Testes
 {
-    class MainClass //{}
+    class MainClass
     {
         public static void Main(string[] args)
         {
-            Console.Write(PowerOf(2, 5));
-                
+            double num1;
+            double num2;
+            Console.Write("Insert a number: ");
+            num1 = GetValidNumber();
+            Console.Write("Insert an operator: ");
+            string op = GetValidOperator();
+            Console.Write("Insert another number: ");
+            num2 = GetValidNumber();
+            Console.Write($"Your calculation is: {num1} {op} {num2} = {GetCalculation(num1, op, num2)}");
             Console.ReadLine();
         }
-
-        static decimal PowerOf(decimal num1, decimal num2)
+        static double GetValidNumber()
         {
-            int i;
-            decimal result = 1;
-
-            for (i = 1; i <= num2; i++)
+            double x;
+            while (!double.TryParse(Console.ReadLine(), out x))
             {
-                result = result * num1;
+                Console.Write("Insert a valid number: ");
             }
-            return result;
+
+            return x;
+        }
+        static string GetValidOperator()
+        {
+            string x = Console.ReadLine();
+
+            while (x != "x" && x != "*" && x != "+" && x != "-" && x != ":" && x != "/")
+            {
+                Console.Write("Insert a valid operator: ");
+                x = Console.ReadLine();
+            }
+            return x;
+        }
+        static double GetCalculation(double x, string y, double z)
+        {
+            if (y == "x" || y == "*")
+            {
+                return x * z;
+            }
+            else if (y == "+")
+            {
+                return x + z;
+            }
+            else if (y == "-")
+            {
+                return x - z;
+            }
+            else if (y == ":" || y == "/")
+            {
+                return x / z;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
