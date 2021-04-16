@@ -6,19 +6,22 @@ namespace Testes
     {
         public static void Main(string[] args)
         {
-            Console.Write(PowerOf(2, 5));
-                
-            Console.ReadLine();
+            Console.Write("Fibonacci Sequence\nHow many times do you want to run the sequence for?: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine(Fibonacci(x));
+
+
         }
-
-        static decimal PowerOf(decimal num1, decimal num2)
+        int Fibonacci(int nTimes)
         {
-            int i;
-            decimal result = 1;
-
-            for (i = 1; i <= num2; i++)
+            int num1 = 0;
+            int num2 = 1;
+            int result;
+            for (int i = 1; i < nTimes; i++)
             {
-                result = result * num1;
+                result = num1 + num2;
+                num1 = num2;
+                num2 = result;
             }
             return result;
         }
