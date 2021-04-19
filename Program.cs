@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Testes
 {
@@ -38,28 +38,24 @@ namespace Testes
             }
             return x;
         }
-        static double GetCalculation(double x, string y, double z)
+        static double GetCalculation(double num1, string op, double num2)
         {
-            if (y == "x" || y == "*")
+            switch (op)
             {
-                return x * z;
+                case "x":
+                case "*":
+                    return num1 * num2;
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case ":":
+                case "/":
+                    return num1 / num2;
+                default:
+                    return 0; //unreachable
             }
-            else if (y == "+")
-            {
-                return x + z;
-            }
-            else if (y == "-")
-            {
-                return x - z;
-            }
-            else if (y == ":" || y == "/")
-            {
-                return x / z;
-            }
-            else
-            {
-                return 0;
-            }
+
         }
     }
 }
