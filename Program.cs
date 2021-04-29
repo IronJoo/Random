@@ -22,7 +22,7 @@ namespace Testes
             double x;
             while (!double.TryParse(Console.ReadLine(), out x))
             {
-                Console.Write("Insert a valid number: ");
+                Console.Write("[Error] Insert a valid number: ");
             }
 
             return x;
@@ -33,7 +33,7 @@ namespace Testes
 
             while (x != "x" && x != "*" && x != "+" && x != "-" && x != ":" && x != "/")
             {
-                Console.Write("Insert a valid operator: ");
+                Console.Write("[Error] Insert a valid operator: ");
                 x = Console.ReadLine();
             }
             return x;
