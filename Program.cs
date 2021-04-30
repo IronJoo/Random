@@ -1,14 +1,15 @@
 using System;
+using System.Collections.Generic;
 
 namespace Testes
 {
-    class MainClass //{}
+    class MainClass
     {
         public static void Main(string[] args)
         {
-            Console.Write("Fibonacci Sequence\nHow many times do you want to run the sequence for?: ");
-            int x = int.Parse(Console.ReadLine());
-            int[] result = Fibonacci(x);
+            Console.Write("--Fibonacci Sequence--\nSelect the range of your sequence: ");
+            int nTimes = int.Parse(Console.ReadLine());
+            int[] result = Fibonacci(nTimes);
             for (int i = 0; i < result.Length; i++)
             {
                 Console.WriteLine(result[i]);
@@ -23,9 +24,10 @@ namespace Testes
             {
                 result[i] = num1 + num2;
                 num1 = num2;
-                num2 = result;
+                num2 = result[i];
             }
             return result;
+
         }
     }
 }
