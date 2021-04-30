@@ -7,15 +7,15 @@ namespace Testes
     {
         public static void Main(string[] args)
         {
-            Console.Write("Fibonacci Sequence\nHow many times do you want to run the sequence for?: ");
-            int x = int.Parse(Console.ReadLine());
-            int[] result = Fibonacci(x);
-            for (int i = 0; i < result.Length; i++)
+            Console.Write("--Fibonacci Sequence--\nSelect the range of your sequence: ");
+            int nTimes = int.Parse(Console.ReadLine());
+            List<int> result = Fibonacci(nTimes);
+            for (int i = 0; i < result.Count; i++)
             {
                 Console.WriteLine(result[i]);
             }
         }
-        static int[] Fibonacci(int nTimes)
+        static List<int> Fibonacci(int nTimes)
         {
             int num1 = 0;
             int num2 = 1;
