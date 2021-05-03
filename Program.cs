@@ -9,22 +9,17 @@ namespace Testes
         {
             Console.Write("--Fibonacci Sequence--\nSelect the range of your sequence: ");
             int nTimes = int.Parse(Console.ReadLine());
-            List<int> result = Fibonacci(nTimes);
-            for (int i = 0; i < result.Count; i++)
+            for (int i = 0; i < Fibonacci(nTimes).Count; i++)
             {
-                Console.WriteLine(result[i]);
+                Console.WriteLine(Fibonacci(nTimes)[i]);
             }
         }
         static List<int> Fibonacci(int nTimes)
         {
-            int num1 = 0;
-            int num2 = 1;
-            List<int> result = new List<int>();
-            for (int i = 0; i < nTimes; i++)
+            List<int> result = new List<int>() { 0, 1 };
+            for (int i = 2; i < nTimes; i++)
             {
-                result.Add(num1 + num2);
-                num1 = num2;
-                num2 = result[i];
+                result.Add(result[i-1] + result[i-2]);
             }
             return result;
 
