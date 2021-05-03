@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Testes
 {
@@ -9,25 +8,21 @@ namespace Testes
         {
             Console.Write("--Fibonacci Sequence--\nSelect the range of your sequence: ");
             int nTimes = int.Parse(Console.ReadLine());
-            int[] result = Fibonacci(nTimes);
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i < Fibonacci(nTimes).Length; i++)
             {
-                Console.WriteLine(result[i]);
+                Console.WriteLine(Fibonacci(nTimes)[i]);
             }
         }
         static int[] Fibonacci(int nTimes)
         {
-            int num1 = 0;
-            int num2 = 1;
             int[] result = new int[nTimes];
-            for (int i = 0; i < nTimes; i++)
+            result[0] = 0;
+            result[1] = 1;
+            for (int i = 2; i < nTimes; i++)
             {
-                result[i] = num1 + num2;
-                num1 = num2;
-                num2 = result[i];
+                result[i] = result[i-1] + result[i-2];
             }
             return result;
-
         }
     }
 }
