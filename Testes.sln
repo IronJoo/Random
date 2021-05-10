@@ -7,14 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "Testes.csproj", "
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|anycpu = Debug|anycpu
-		Release|anycpu = Release|anycpu
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Debug|anycpu.Build.0 = Debug|anycpu
-		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Release|anycpu.ActiveCfg = Release|anycpu
-		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Release|anycpu.Build.0 = Release|anycpu
+		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Release|Any CPU.ActiveCfg = Release|anycpu
+		{ACEEE3B6-94D9-4F86-8897-5427E27D992C}.Release|Any CPU.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
